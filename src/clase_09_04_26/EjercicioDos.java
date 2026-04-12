@@ -23,6 +23,9 @@ public class EjercicioDos {
         System.out.println("Ingrese la altura de la primer persona en metros: ");
         personaA = teclado.nextDouble();
 
+        // Volvemos a definir nuestro escaner asi liberamos memoria por las dudas
+        teclado = new Scanner(System.in);
+
         System.out.println("Ingrese la altura de la segunda persona en metros: ");
         personaB = teclado.nextDouble();
 
