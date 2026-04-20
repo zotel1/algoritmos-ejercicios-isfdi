@@ -15,7 +15,9 @@ public class EjercicioTres {
         int cantidadInvertir;
         double interesAnual;
         int numeroDeAnios;
-        int capitalObtenido;
+        double capitalObtenido;
+        double interesObtenido;
+        double interes;
 
         System.out.println("Ingrese la cantidad de dinero que desea invertir: ");
         cantidadInvertir = teclado.nextInt();
@@ -31,12 +33,24 @@ public class EjercicioTres {
             } else {
 
                 // Falta desarrollar
+                interesAnual = cantidadInvertir * (0.2);
+                interesObtenido = 0;
                 for (int i  = 0; i < numeroDeAnios; i++) {
 
-                    interesAnual = cantidadInvertir * (0.35);
-                }
+                    interesObtenido += interesAnual;
 
-                System.out.println("Ya puede comenzar a invertir");
+
+
+                    //System.out.println("El intere anual es: " +  interesAnual);
+                    //interes = interesObtenido + interesAnual;
+                    //System.out.println("EL valor de la variable interes es: " + interes);
+
+                }
+                System.out.println("El interes obtenido es: " + interesObtenido);
+                capitalObtenido = interesObtenido + cantidadInvertir;
+                System.out.println("El capital obtenido es: " + capitalObtenido);
+
+                System.out.println("Ya puede comenzar a invertir: ");
             }
         }
     }
