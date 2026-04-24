@@ -26,11 +26,13 @@ un triángulo rectángulo como el de más abajo, de altura el número introducid
         ingreseNumero = teclado.nextInt();
 
 
-        for (int i = 0; i <= ingreseNumero; i++) {
-            System.out.print("[*]");
-            for (int j = 0; j <= ingreseNumero; j++) {
-                System.out.println("*");
-            }
+        for (int i = 1; i <= ingreseNumero; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
         }
+            System.out.println("");
+        }
+
     }
 }
+
