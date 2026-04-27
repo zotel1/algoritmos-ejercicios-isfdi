@@ -1,4 +1,4 @@
-package clase_23_04_26;
+package clase_23_04_26_guia_tres;
 
 import java.util.Scanner;
 
@@ -50,7 +50,7 @@ d. Cantidad de mujeres y de varones.*/
             edadTotal = edadTotal + edad;
 
             System.out.println("Ingrese los minutos que corrio el participante: ");
-            minutos = tecladoMinutos.nextInt();
+            minutos = tecladoMinutos.nextDouble();
 
             System.out.println("Desea ingresar datos? s/n");
             ingresoDatos = tecladoDatos.nextLine();

@@ -1,4 +1,4 @@
-package clase_09_04_26;
+package clase_09_04_26_guia_dos;
 
 
 import java.util.Scanner;

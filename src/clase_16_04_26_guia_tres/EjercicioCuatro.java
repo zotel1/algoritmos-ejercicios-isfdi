@@ -1,4 +1,4 @@
-package clase_16_04_26;
+package clase_16_04_26_guia_tres;
 
 import java.util.Scanner;
 
