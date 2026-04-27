@@ -17,16 +17,20 @@ d. Cantidad de mujeres y de varones.*/
         Scanner tecladoGenero = new  Scanner(System.in);
         Scanner tecladoEdad = new  Scanner(System.in);
         Scanner tecladoMinutos = new  Scanner(System.in);
-        String nombreApellido;
+        String nombreApellido = "";
         String genero;
         int edad;
         int edadTotal = 0;
         double minutos;
         double minutosTotal = 0;
-        String nombresTotales = " ";
+        double minutosPromedio;
+        // Comienzo de ciclo while
         String ingresoDatos;
+        //contadores generos
         int genMasculino = 0;
         int genFemenino = 0;
+        int competidoresTotal = 0;
+        double promedioEdad;
 
         System.out.println("Desea ingresar datos? s/n");
         ingresoDatos = tecladoDatos.nextLine();
@@ -34,15 +38,18 @@ d. Cantidad de mujeres y de varones.*/
         while (ingresoDatos.equalsIgnoreCase("s")) {
             System.out.println("Ingrese el nombre y apellido del participante: ");
             nombreApellido = tecladoNombres.nextLine();
-            nombresTotales = nombreApellido + nombresTotales;
+
+            competidoresTotal = competidoresTotal + 1;
 
             System.out.println("Ingrese el genero del participante [M=mujeres, V=varones]: ");
             genero = tecladoGenero.nextLine();
             if (genero.equalsIgnoreCase("M")) {
-                genMasculino = genMasculino + 1;
+                genFemenino = genFemenino + 1;
             }
             else {
-                genFemenino = genFemenino + 1;
+                if (genero.equalsIgnoreCase("V")){
+                    genMasculino = genMasculino + 1;
+            }
             }
 
             System.out.println("Ingrese el edad del participante: ");
@@ -51,11 +58,21 @@ d. Cantidad de mujeres y de varones.*/
 
             System.out.println("Ingrese los minutos que corrio el participante: ");
             minutos = tecladoMinutos.nextDouble();
+            minutosTotal = minutosTotal + minutos;
 
             System.out.println("Desea ingresar datos? s/n");
             ingresoDatos = tecladoDatos.nextLine();
 
         }
+
+        promedioEdad = (double) edadTotal / competidoresTotal;
+        minutosPromedio = minutosTotal / competidoresTotal;
+        System.out.println("La cantidad de competidores es: " +  competidoresTotal);
+        System.out.println("El promedio de edad de los competidores es: " +  promedioEdad);
+        System.out.println("El tiempo promedio en minutos de competencia es: " + minutosPromedio);
+        System.out.println("La cantidad de competidores varones es: " + genMasculino);
+        System.out.println("La cantidad de competidores mujeres es: " + genFemenino);
         System.out.println("Fin de la aplicación...");
+
     }
 }
