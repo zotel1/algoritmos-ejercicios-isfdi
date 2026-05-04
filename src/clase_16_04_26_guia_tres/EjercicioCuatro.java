@@ -18,13 +18,11 @@ un triángulo rectángulo como el de más abajo, de altura el número introducid
 
         int ingreseNumero;
         Scanner teclado = new Scanner(System.in);
-        String[][] triangulo = new String[0][];
 
         System.out.println("Ingrese un número");
         System.out.println("El mismo sera la altura del triangulo rectangulo.");
 
         ingreseNumero = teclado.nextInt();
-
 
         for (int i = 1; i <= ingreseNumero; i++) {
             for (int j = 1; j <= i; j++) {
@@ -32,7 +30,6 @@ un triángulo rectángulo como el de más abajo, de altura el número introducid
         }
             System.out.println("");
         }
-
     }
 }
 
